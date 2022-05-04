@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+#include<string.h>
+
+int main(){
+char str[100],bstr[100];
+int i;
+int j=0;
+int count=0;
+printf("enter received string=");
+scanf("%s",str);
+for(i=0;i<strlen(str);i++){
+    if(str[i]=='1')
+        count++;
+    else
+        count=0;
+    if(count==5){
+        bstr[j]=str[i];
+        i++;
+        count=0;
+    }
+    else{
+    bstr[j]=str[i];
+    }
+    j++;
+}
+bstr[j]='\0';
+printf("decoded string is=%s",bstr);
+}
